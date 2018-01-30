@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coin_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decisions,  decisions..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCj-MX-HrY">
+                                <rect key="frame" x="32" y="63" width="256" height="85"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Aox-Vj-aDi">
+                                <rect key="frame" x="32" y="162.5" width="256" height="256.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Aox-Vj-aDi" secondAttribute="height" multiplier="1:1" id="cmU-t8-Igk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhT-E0-Sg7">
+                                <rect key="frame" x="32" y="478" width="256" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="Give it a flip!">
+                                    <color key="titleColor" red="0.43137254901960786" green="0.75294117647058822" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kay-Me-3tP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43137254901960786" green="0.75294117647058822" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MhT-E0-Sg7" firstAttribute="top" secondItem="Aox-Vj-aDi" secondAttribute="bottom" constant="59" id="FMw-4F-lXa"/>
+                            <constraint firstItem="CCj-MX-HrY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="FiY-9y-dcQ"/>
+                            <constraint firstItem="CCj-MX-HrY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xhg-PF-SSt"/>
+                            <constraint firstItem="MhT-E0-Sg7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="YqY-tU-qVW"/>
+                            <constraint firstItem="Aox-Vj-aDi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="c9R-3y-YbG"/>
+                            <constraint firstItem="MhT-E0-Sg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dV2-qB-PR4"/>
+                            <constraint firstItem="CCj-MX-HrY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="esh-m1-m6S"/>
+                            <constraint firstItem="Aox-Vj-aDi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sRJ-pD-FHp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MhT-E0-Sg7" secondAttribute="bottom" constant="40" id="w9u-gz-UhG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coinImage" destination="Aox-Vj-aDi" id="VRt-Gc-ixc"/>
+                        <outlet property="introText" destination="CCj-MX-HrY" id="uyQ-xY-LEX"/>
+                        <outlet property="introTopConstrain" destination="esh-m1-m6S" id="4Yy-7K-Z23"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="138.0809595202399"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coin_empty" width="250" height="250"/>
+    </resources>
+</document>

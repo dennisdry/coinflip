@@ -1,1 +1,1 @@
-# coinflip
+# coinflip_ios
